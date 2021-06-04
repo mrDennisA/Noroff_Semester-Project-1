@@ -31,3 +31,14 @@ const navIcon = `
     <line x1="16" y1="32" x2="48" y2="32"/>
 </svg>
 `;
+
+const pageLoader = `
+    <div id="page-loader">
+        <svg viewBox="0 0 64 64">
+            <rect class="cls-1" x="2" y="2" width="28" height="28" />
+            <rect class="cls-1" x="34" y="2" width="28" height="28" />
+            <rect class="cls-1" x="34" y="34" width="28" height="28" />
+            <rect class="cls-1" x="2" y="34" width="28" height="28" />
+        </svg>
+    </div>
+`;

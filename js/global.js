@@ -52,6 +52,9 @@ body.innerHTML = `
     <main></main>
     <footer></footer>`;
 
+const main = document.querySelector("main");
+main.innerHTML = `${pageLoader}`;
+
 // API Data
 const urlApi = "https://yunitto.online/noroff/FEU1_portfolio/Semester-Project-1/wp/wp-json/wp/v2/";
 
@@ -65,7 +68,7 @@ async function fetchApi(url) {
         addHeader();
 
         // Page Banner
-        document.querySelector("main").innerHTML = `
+        main.innerHTML = `
         <section id="banner-container">
             <div>
                 <div class="banner-image" style="background-image: url(${mediaFilter(media, pagesFilter(pages, extractPageName)).source_url})">

@@ -1,5 +1,5 @@
 function addMain(pages, posts, media) {
-    document.querySelector("main").innerHTML += `
+    main.innerHTML += `
     <section id="main-container">
         <div class="wrapper get-involved">
             <div class="support">${postFilter(posts, getInvolved)[2].content.rendered}</div>

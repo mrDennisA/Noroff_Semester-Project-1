@@ -21,6 +21,7 @@ section p:not(.kids p:nth-child(2)) {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
+
     border-bottom: 1px var(--yellow01) solid;
 }
 

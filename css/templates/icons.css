@@ -1,0 +1,49 @@
+/* Logo */
+#logoIcon {
+    width: 64px;
+    height: 64px;
+}
+#logoIcon path:nth-child(1) {
+    fill: var(--color10);
+}
+#logoIcon path:nth-child(2) {
+    fill: var(--color10);
+}
+#logoIcon circle:nth-child(3) {
+    fill: var(--yellow01);
+}
+
+/* Nav */
+#navIcon {
+    width: 64px;
+    height: 64px;
+}
+#navIcon line {
+    stroke: var(--color10);
+    stroke-width: 2px;
+    transform: rotate(0);
+    transform-origin: center;
+}
+
+#navIcon line:nth-child(1) {
+    transform: translateY(-8px);
+}
+
+#navIcon line:nth-child(3) {
+    transform: translateY(8px);
+}
+#navIcon:hover line {
+    stroke: var(--yellow01);
+}
+
+#header-container.open line:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+#header-container.open line:nth-child(2) {
+    transform: scaleX(0);
+}
+
+#header-container.open line:nth-child(3) {
+    transform: rotate(-45deg);
+}

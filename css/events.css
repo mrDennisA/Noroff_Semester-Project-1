@@ -1,0 +1,91 @@
+section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-container .events {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--l);
+    padding: var(--m);
+}
+
+#main-container .events p {
+    padding: var(--m);
+}
+
+#main-container .events figure {
+    max-height: 276px;
+}
+
+#main-container .events h2 {
+    text-align: center;
+    min-height: 5rem;
+    padding: var(--m);
+    border-bottom: 1px var(--yellow01) solid;
+}
+
+#main-container .events > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area03";
+    gap: var(--m);
+    padding: var(--m);
+}
+
+#main-container .events > :nth-child(1) {
+    background-color: var(--blue02);
+}
+
+#main-container .events > div > :nth-child(1) {
+    grid-area: area01;
+    border-bottom: 1px var(--yellow01) solid;
+}
+
+#main-container .events > div > :nth-child(2) {
+    grid-area: area02;
+}
+
+#main-container .events > div > :nth-child(3) {
+    grid-area: area03;
+}
+
+#main-container .events > :nth-child(2) {
+    background-color: var(--yellow02);
+}
+
+#main-container .events > :nth-child(3) {
+    background-color: var(--green02);
+}
+
+@media only screen and (min-width: 768px) {
+    #main-container .events {
+        padding: var(--l);
+    }
+
+    #main-container .events > div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "area01 area01"
+            "area02 area03";
+    }
+}
+@media only screen and (min-width: 992px) {
+    #main-container .events {
+        grid-template-columns: repeat(3, 1fr);
+        padding: var(--xl);
+    }
+    #main-container .events > div {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "area01"
+            "area02"
+            "area03";
+    }
+}

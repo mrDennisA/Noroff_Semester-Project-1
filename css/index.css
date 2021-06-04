@@ -1,0 +1,267 @@
+section figure {
+    max-height: 276px;
+}
+
+section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section p:not(.kids p:nth-child(2)) {
+    padding: var(--m);
+}
+
+.intro {
+    max-width: 960px;
+    margin: auto;
+    padding: var(--m) 0 0;
+}
+.intro p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px var(--yellow01) solid;
+}
+
+.info > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area05"
+        "area03"
+        "area06"
+        "area04"
+        "area07";
+    gap: var(--m);
+    padding: var(--m);
+}
+
+.info > div :nth-child(1) {
+    grid-area: area01;
+    background-color: var(--overlay02);
+}
+.info > div :nth-child(2) {
+    grid-area: area02;
+}
+.info > div :nth-child(3) {
+    grid-area: area03;
+}
+.info > div :nth-child(4) {
+    grid-area: area04;
+}
+.info > div :nth-child(5) {
+    grid-area: area05;
+}
+.info > div :nth-child(6) {
+    grid-area: area06;
+    background-color: var(--overlay02);
+}
+.info > div :nth-child(7) {
+    grid-area: area07;
+}
+
+/* Kids */
+.kids {
+    color: white;
+    background-color: var(--color02);
+}
+
+.kids > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area03"
+        "area06"
+        "area04"
+        "area07"
+        "area08"
+        "area05"
+        "area09";
+    gap: var(--m);
+    padding: var(--m);
+}
+
+.kids h2:nth-child(1) {
+    grid-area: area01;
+    border-bottom: 1px var(--yellow01) solid;
+}
+.kids > div > :nth-child(2) {
+    grid-area: area02;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.kids :nth-child(3) {
+    grid-area: area03;
+}
+.kids :nth-child(4) {
+    grid-area: area04;
+}
+.kids :nth-child(5) {
+    grid-area: area05;
+}
+.kids :nth-child(6) {
+    grid-area: area06;
+}
+.kids :nth-child(7) {
+    grid-area: area07;
+    background-color: var(--overlay02);
+}
+.kids :nth-child(8) {
+    grid-area: area08;
+}
+.kids :nth-child(9) {
+    grid-area: area09;
+    background-color: var(--overlay02);
+}
+
+.adults > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--m);
+    padding: var(--m);
+}
+.adults .teachers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "area01"
+        "area03"
+        "area02"
+        "area04";
+    gap: var(--m);
+}
+
+.adults .teachers > :nth-child(1) {
+    grid-area: area01;
+    border-bottom: 1px var(--yellow01) solid;
+}
+.adults .teachers > :nth-child(2) {
+    grid-area: area02;
+}
+.adults .teachers > :nth-child(3) {
+    grid-area: area03;
+    background-color: var(--overlay02);
+}
+.adults .teachers > :nth-child(4) {
+    grid-area: area04;
+}
+
+.adults .researchers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area04"
+        "area03";
+    gap: var(--m);
+}
+
+.adults .researchers > :nth-child(1) {
+    grid-area: area01;
+    border-bottom: 1px var(--yellow01) solid;
+}
+.adults .researchers > :nth-child(2) {
+    grid-area: area02;
+    background-color: var(--overlay02);
+}
+.adults .researchers > :nth-child(3) {
+    grid-area: area03;
+}
+.adults .researchers > :nth-child(4) {
+    grid-area: area04;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro {
+        padding: var(--l) var(--l) 0;
+    }
+
+    .info > div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "area01 area02"
+            "area05 area03"
+            "area04 area06"
+            "area04 area07";
+        padding: var(--l);
+    }
+
+    .kids > div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "area01 area01"
+            "area02 area02"
+            "area06 area03"
+            "area07 area03"
+            "area04 area08"
+            "area05 area09";
+        padding: var(--l);
+    }
+
+    .adults > div {
+        grid-template-columns: 1fr;
+        gap: var(--l);
+        padding: var(--l);
+    }
+
+    .adults .teachers {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(2, 1fr);
+        grid-template-areas:
+            "area01 area01"
+            "area03 area02"
+            "area03 area04";
+    }
+
+    .adults .researchers {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(2, 1fr);
+        grid-template-areas:
+            "area01 area01"
+            "area02 area03"
+            "area04 area03";
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .intro {
+        padding: var(--xl) 0 0;
+    }
+    .info > div {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "area01 area05 area03 area03"
+            "area02 area04 area06 area07";
+        padding: var(--xl);
+    }
+
+    .kids > div {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "area01 area01 area01 area01"
+            "area02 area02 area02 ."
+            "area03 area04 area04 area05"
+            "area06 area07 area08 area09";
+        padding: var(--xl);
+    }
+
+    .adults > div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--xl);
+        padding: var(--xl);
+    }
+}

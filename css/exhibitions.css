@@ -1,0 +1,225 @@
+section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-container figure {
+    max-height: 276px;
+}
+
+.exhibitions {
+    color: white;
+}
+
+.exhibitions > :nth-child(1) {
+    background-color: var(--color05);
+}
+
+.exhibitions > :nth-child(1) .exhibitions-gradient {
+    background: radial-gradient(circle 640px, transparent -90%, var(--color05) 90%);
+}
+
+.exhibitions > :nth-child(2) {
+    background-color: var(--color06);
+}
+
+.exhibitions > :nth-child(2) .exhibitions-gradient {
+    background: radial-gradient(circle 640px, transparent -90%, var(--color06) 90%);
+}
+
+.exhibitions > :nth-child(3) {
+    background-color: var(--color07);
+}
+
+.exhibitions > :nth-child(3) .exhibitions-gradient {
+    background: radial-gradient(circle 640px, transparent -90%, var(--color07) 90%);
+}
+
+.exhibitions > :nth-child(4) {
+    background-color: var(--color08);
+}
+
+.exhibitions > :nth-child(4) .exhibitions-gradient {
+    background: radial-gradient(circle 640px, transparent -90%, var(--color08) 90%);
+}
+
+.exhibitions > :nth-child(5) {
+    background-color: var(--color09);
+}
+
+.exhibitions > :nth-child(5) .exhibitions-gradient {
+    background: radial-gradient(circle 640px, transparent -90%, var(--color09) 90%);
+}
+
+.exhibitions-image {
+    position: relative;
+    background: center no-repeat;
+    background-size: cover;
+}
+
+.exhibitions-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cosmology,
+.evolution,
+.biology,
+.robotics,
+.ecology {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--m);
+    padding: var(--l) var(--m);
+}
+
+.cosmology > :nth-child(1),
+.evolution > :nth-child(1),
+.biology > :nth-child(1),
+.robotics > :nth-child(1),
+.ecology > :nth-child(1) {
+    grid-area: area01;
+    border-bottom: 1px var(--yellow01) solid;
+}
+.cosmology > :nth-child(2),
+.evolution > :nth-child(2),
+.biology > :nth-child(2),
+.robotics > :nth-child(2),
+.ecology > :nth-child(2) {
+    grid-area: area02;
+}
+.cosmology > :nth-child(3),
+.evolution > :nth-child(3),
+.biology > :nth-child(3),
+.robotics > :nth-child(3),
+.ecology > :nth-child(3) {
+    grid-area: area03;
+}
+.cosmology > :nth-child(4),
+.evolution > :nth-child(4),
+.biology > :nth-child(4),
+.robotics > :nth-child(4),
+.ecology > :nth-child(4) {
+    grid-area: area04;
+}
+.cosmology > :nth-child(5),
+.evolution > :nth-child(5),
+.biology > :nth-child(5),
+.ecology > :nth-child(5) {
+    grid-area: area05;
+}
+
+.biology > :nth-child(6) {
+    grid-area: area06;
+}
+
+.cosmology {
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area04"
+        "area03"
+        "area05";
+}
+
+.evolution {
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area05"
+        "area03"
+        "area04";
+}
+
+.biology {
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area05"
+        "area03"
+        "area06"
+        "area04";
+}
+
+.robotics {
+    grid-template-areas:
+        "area01"
+        "area04"
+        "area02"
+        "area03";
+}
+
+.ecology {
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area05"
+        "area04"
+        "area03";
+}
+
+@media only screen and (min-width: 768px) {
+    .cosmology,
+    .evolution,
+    .biology,
+    .robotics,
+    .ecology {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--l);
+        padding: var(--l);
+    }
+
+    .cosmology {
+        grid-template-areas:
+            "area01 area01"
+            "area02 area05"
+            "area04 area05"
+            "area04 area03"
+            "area04 .";
+    }
+
+    .evolution {
+        grid-template-areas:
+            "area01 area01"
+            "area02 area03"
+            "area05 area04";
+    }
+
+    .biology {
+        grid-template-areas:
+            "area01 area01"
+            "area02 ."
+            "area05 area06"
+            "area03 area04";
+    }
+
+    .robotics {
+        grid-template-areas:
+            "area01 area01"
+            "area04 area03"
+            "area02 area03";
+    }
+
+    .ecology {
+        grid-template-areas:
+            "area01 area01"
+            "area02 area04"
+            "area05 area03";
+    }
+}
+@media only screen and (min-width: 992px) {
+    .cosmology,
+    .evolution,
+    .biology,
+    .robotics,
+    .ecology {
+        gap: var(--l) var(--xl);
+        padding: var(--xl);
+    }
+}

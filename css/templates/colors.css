@@ -1,0 +1,33 @@
+:root {
+    --color01: #222225;
+    --color02: #61616b;
+    --color03: #e3e3e8;
+
+    --color05: #060626;
+    --color06: #33271e;
+    --color07: #3d4b66;
+    --color08: #2c0a33;
+    --color09: #264026;
+    --color10: #ffffff;
+
+    --yellow01: #eba747;
+    --yellow02: #ffdfb3;
+
+    --blue01: #1f5b93;
+    --blue02: #c1daf0;
+
+    --green01: #466b2e;
+    --green02: #c8e0b8;
+
+    --red01: #d04343;
+    --red02: #f5d6d6;
+
+    --overlay01: hsl(240, 4%, 14%, 80%);
+    --overlay02: hsl(240, 4%, 14%, 5%);
+
+    --false: red;
+}
+
+h1 {
+    color: var(--color10);
+}

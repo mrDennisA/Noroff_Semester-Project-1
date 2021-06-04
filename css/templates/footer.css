@@ -1,0 +1,87 @@
+footer {
+    background-color: var(--color02);
+}
+
+footer * {
+    color: var(--color10);
+}
+
+#footer-container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "area01"
+        "area02"
+        "area03";
+    gap: var(--m);
+    padding: var(--m) 0;
+}
+
+#footer-container .location,
+#footer-container .houres {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--m);
+    padding: var(--m);
+}
+
+#footer-container .location {
+    grid-area: area01;
+}
+
+#footer-container h2,
+#footer-container .location figure {
+    display: none;
+}
+
+#footer-container .houres {
+    grid-area: area02;
+    background-color: var(--overlay02);
+}
+
+#footer-container .houres table {
+    width: 100%;
+}
+
+#footer-container .houres tr {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--xs) 0;
+}
+
+#footer-container .location > :nth-child(1),
+#footer-container .houres > :nth-child(1) {
+    border-bottom: 1px var(--yellow01) solid;
+}
+
+#footer-container .copyright {
+    grid-area: area03;
+}
+
+#footer-container .location,
+#footer-container .houres > :nth-child(1),
+#footer-container .copyright {
+    text-align: center;
+}
+
+#footer-container > div > div > :nth-child(1) {
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+    #footer-container > div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "area01 area02"
+            "area03 area03";
+        padding: var(--l);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #footer-container > div {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "area01 area02 area03";
+        padding: var(--xl);
+    }
+}
